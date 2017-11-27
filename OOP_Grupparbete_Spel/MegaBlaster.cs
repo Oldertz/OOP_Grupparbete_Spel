@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace OOP_Grupparbete_Spel
 {
-    class Program
+    class MegaBlaster : Tank
     {
-        static void Main(string[] args)
+        public MegaBlaster() 
+            : base("MegaBlaster", 2000, new Range(400, 600), 50)
         {
-            Game game = new Game();
-            game.Start();
-            Console.ReadLine();
         }
+
+        //Skriv ut parametrar för tnaken
     }
 }

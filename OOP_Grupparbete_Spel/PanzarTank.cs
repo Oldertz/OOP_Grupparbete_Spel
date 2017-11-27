@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace OOP_Grupparbete_Spel
 {
-    class Program
+    class PanzarTank : Tank
     {
-        static void Main(string[] args)
+        public PanzarTank() 
+            : base("PanzarTank", 3000, new Range(300, 500), 70)
         {
-            Game game = new Game();
-            game.Start();
-            Console.ReadLine();
         }
+
+        
     }
 }
