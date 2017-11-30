@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace OOP_Grupparbete_Spel
 {
     class Game
     {
-        private const int _dispalyWidth = 42;
+        private const int _displayWidth = 42;
 
         public void Start()
         {
@@ -61,23 +62,23 @@ namespace OOP_Grupparbete_Spel
 
         private void DisplayBattle(PanzarTank PT, MegaBlaster MB)
         {
-            Console.WriteLine(new String('*', _dispalyWidth));
+            Console.WriteLine(new String('*', _displayWidth));
             Console.WriteLine("{0} has {1}hp and the {2} has {3}hp",
                 PT.Name, PT.HitPoints, MB.Name, MB.HitPoints);
-            Console.WriteLine(new String('*', _dispalyWidth));
+            Console.WriteLine(new String('*', _displayWidth));
         }
 
         private void DisplayChoices()
         {
-            Console.WriteLine(new String('-', _dispalyWidth));
+            Console.WriteLine(new String('-', _displayWidth));
             Console.WriteLine("Please Choose an action:");
             Console.WriteLine("(A)ttack");
             Console.WriteLine("(D)efend");
             Console.WriteLine("(H)eal");
             Console.WriteLine("(F)lee");
-            Console.WriteLine(new String('-', _dispalyWidth));
+            Console.WriteLine(new String('-', _displayWidth));
         }
-
+        
         private BattleChoice GetChoice()
         {
             DisplayChoices();
